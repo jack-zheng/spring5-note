@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cat" class="com.jzheng.pojo.Cat"/>
+    <bean id="dog" class="com.jzheng.pojo.Dog"/>
+
+<!--    <bean id="people" class="com.jzheng.pojo.People">-->
+<!--        <property name="cat" ref="cat"/>-->
+<!--        <property name="dog" ref="dog"/>-->
+<!--        <property name="name" value="jack"/>-->
+<!--    </bean>-->
+    <!--
+    byName, 和 set后面的名字相同的 id
+    byType, 类型相同的
+    -->
+    <bean id="people" class="com.jzheng.pojo.People" autowire="byType">
+        <property name="name" value="jack"/>
+    </bean>
+
+</beans>

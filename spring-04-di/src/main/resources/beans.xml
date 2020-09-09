@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.jzheng.pojo.Address">
+        <property name="address" value="Shanghai"/>
+    </bean>
+
+    <bean id="student" class="com.jzheng.pojo.Student">
+        <property name="name" value="jack"/>
+        <!-- 注入对象 -->
+        <property name="address" ref="address"/>
+        <!-- 注入数组 -->
+        <property name="books">
+            <array>
+                <value>honglou</value>
+                <value>xiyou</value>
+            </array>
+        </property>
+        <!-- 注入list -->
+        <property name="hobbies">
+            <list>
+                <value>sing</value>
+                <value>running</value>
+            </list>
+        </property>
+        <!-- 注入 map -->
+        <property name="cards">
+            <map>
+                <entry key="身份证" value="11111"/>
+            </map>
+        </property>
+        <!-- 注入 set -->
+        <property name="games">
+            <set>
+                <value>lol</value>
+                <value>bob</value>
+            </set>
+        </property>
+        <!-- 注入 null -->
+        <property name="wife">
+            <null/>
+        </property>
+        <!-- 注入 properties -->
+        <property name="info">
+            <props>
+                <prop key="no">123</prop>
+                <prop key="uname">jack</prop>
+                <prop key="gender">man</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

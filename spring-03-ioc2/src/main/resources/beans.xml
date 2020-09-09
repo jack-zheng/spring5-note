@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.jzheng.pojo.User" name="u1,u2">
+        <!--        <property name="name" value="jack"/>-->
+        <!-- 下标赋值 -->
+        <!--        <constructor-arg index="0" value="with arg"/>-->
+        <!-- 类型构造, 不建议使用 -->
+        <!--        <constructor-arg type="java.lang.String" value="with-type"/>-->
+        <constructor-arg name="name" value="with-name"/>
+    </bean>
+
+    <alias name="user" alias="userAlias"/>
+
+</beans>
